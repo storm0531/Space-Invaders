@@ -43,14 +43,14 @@ class Bullet(Turtle):
             new_y = bullet.ycor() + 20
             bullet.goto(bullet.xcor(),new_y)
             if bullet.ycor() > 350:
-                bullet.color("black")
+                bullet.hideturtle()
                 self.all_player_bullets.remove(bullet)
 
         for enemy_bullet in self.all_aliens_bullets:
             new_y = enemy_bullet.ycor() - 20
             enemy_bullet.goto(enemy_bullet.xcor(), new_y)
             if enemy_bullet.ycor() < -350 :
-                enemy_bullet.color("black")
+                enemy_bullet.hideturtle()
                 self.all_aliens_bullets.remove(enemy_bullet)
 
     def destroy_all_bullets(self):
